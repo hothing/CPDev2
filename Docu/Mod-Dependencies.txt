@@ -1,0 +1,24 @@
+digraph ComponentPascal {
+
+  DevCPM -> Files;
+  DevCPM -> TextModels;
+  
+  DevCPT -> DevCPM;
+  DevCPP -> DevCPT;
+  
+  DevCPB -> DevCPT;
+  
+  DevCPE ->  SYSTEM, Dates, DevCPM, DevCPT;
+  
+  DevCPS -> SYSTEM, Math, Strings, DevCPM, DevCPT;
+  
+  DevCPV486 -> SYSTEM, DevCPM, DevCPT, DevCPE, DevCPH, DevCPL486, DevCPC486;
+  
+  DevCPH -> DevCPT;
+  
+  DevCPL486 ->  DevCPM, DevCPT, DevCPE;
+  
+  DevCPC486 -> SYSTEM, DevCPM, DevCPT, DevCPE, DevCPL486;
+  
+  DevCompiler -> DevCPM, DevCPT, DevCPB, DevCPP, DevCPE, DevCPV486, DevCPS;
+}
